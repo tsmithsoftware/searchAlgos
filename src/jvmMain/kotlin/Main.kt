@@ -2,6 +2,7 @@
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.runtime.Composable
@@ -16,7 +17,21 @@ import ui.BinarySearchNode
 @Composable
 @Preview
 fun App() {
-    BinarySearchNode(Math.random() > 0, Node("1", null))
+    Column {
+        Row {
+            BinarySearchNode(true, Node("1", null))
+            BinarySearchNode(false, Node("1", null))
+        }
+        Row {
+            BinarySearchNode(true, Node("1", null))
+            BinarySearchNode(false, Node("1", null))
+        }
+        Row {
+            BinarySearchNode(true, Node("1", null))
+            BinarySearchNode(false, Node("1", null))
+        }
+    }
+
     /**
     val numbers = (0..19).toList()
 
